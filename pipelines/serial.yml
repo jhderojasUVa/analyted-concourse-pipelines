@@ -1,0 +1,33 @@
+# Serial jobs, only one at at time
+# If you try to trigger several times it will run one after another
+# Put several steps to take longer
+jobs:
+- name: one-at-a-time
+  public: true
+  # This makes the two task run in serial
+  serial: true
+  plan:
+  - task: task-one
+    config:
+      platform: linux
+      type: registry-image
+      source: { repository: busybox }
+      run:
+        path: echo
+        args: ["Hello, World!"]
+  - task: task-two
+    config:
+      platform: linux
+      type: registry-image
+      source: { repository: busybox }
+      run:
+        path: echo
+        args: ["Another Hello, World!"]
+  - task: task-three
+    config:
+      platform: linux
+      type: registry-image
+      source: { repository: busybox }
+      run:
+        path: echo
+        args: ["Another one Hello, World!"]

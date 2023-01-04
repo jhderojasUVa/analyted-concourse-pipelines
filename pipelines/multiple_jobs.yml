@@ -1,0 +1,35 @@
+# Multiple jobs that you can run independently
+jobs:
+  - name: job_number_1
+    public: true
+    trigger: true
+    plan:
+    - task: task-one
+      config:
+        platform: linux
+        image_resource:
+          type: registry-image
+          source: { repository: busybox }
+        run:
+          path: echo
+          args: ["Hello World! from Job number 1"]
+  - name: job_number_2
+    public: true
+    trigger: true
+    plan:
+    - task: task-one
+      config:
+        platform: linux
+        type: registry-image
+        source: { repository: busybox }
+        run:
+          path: echo
+          args: ["Hello, World! from Job number 2"]
+    - task: task-two
+      config:
+        platform: linux
+        type: registry-image
+        source: { repository: busybox }
+        run:
+          path: echo
+          args: ["Hello, World! from Job number 2"]
