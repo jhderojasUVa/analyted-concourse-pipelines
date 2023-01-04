@@ -18,6 +18,8 @@ It starts whatever is needed, start the ui at `http://localhost:8080`, sets the 
 
 To check everything is running, open a browser and check the URL.
 
+If you want to add more workers on the `keys` directory you have what you need, session, TSA, worker keys.
+
 ## Scripts to help run commands
 
 For making easy to use the `fly` command we have created a `/scripts` directory in `bash`.
