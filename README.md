@@ -1,6 +1,6 @@
 # analyted-concourse
 
-Example of pipelines for Concourse for AnalyTED talks, to explain basic usage of Concourse and pipelines.
+Example of pipelines for Concourse for [AnalyTED talks](https://wiki.at.sky/display/AT/AnalyTED+talks), to explain basic usage of Concourse and pipelines.
 
 # List of contents
 
