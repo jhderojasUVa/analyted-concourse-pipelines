@@ -1,0 +1,14 @@
+# Starting (hello world)
+jobs:
+- name: errored-pipeline
+  public: true
+  plan:
+  - task: make-it-error
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source: { repository: busybox }
+      run:
+        # Force a bad command to show error
+        path: exit

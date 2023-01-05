@@ -1,0 +1,17 @@
+# Starting (hello world)
+jobs:
+- name: failure-pipeline
+  public: true
+  plan:
+  - task: make-it-fail
+    config:
+      platform: linux
+      image_resource:
+        type: registry-image
+        source: { repository: busybox }
+      run:
+        path: sh
+        args:
+          - -cx
+          - |
+            exit 1

@@ -42,3 +42,5 @@ Next some basic examples:
 - `time_job.yml`: example of a resource that trigger the pipeline every 10 seconds
 - `docker_image.yml`: example about how to work with docker images
 - `resource_git.yml`: a little more complex one that uses git resource to retrieve a repo, and explain how to pass artifacts between steps by starting several different docker images, one for only copy the content and the other to install and build a React application
+- `error.yml`: example that returns an error, it makes that the pipeline is not correct (what is doing)
+- `failure.yml`: example of a pipeline that in one step/task returns 1 (failure of the command)

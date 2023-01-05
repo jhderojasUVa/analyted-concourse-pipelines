@@ -1,16 +1,16 @@
 # Time interval job with resource "time"
 resources:
-- name: every-10s
+- name: every-60s
   type: time
   icon: clock-outline
   source:
-    interval: 10s
+    interval: 60s
 
 jobs:
 - name: job
   public: true
   plan:
-  - get: every-10s
+  - get: every-60s
     trigger: true
   - task: simple-task
     config:
