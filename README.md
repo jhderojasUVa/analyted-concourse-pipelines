@@ -38,6 +38,7 @@ Next some basic examples:
 
 - `starting.yml`: simple hello world
 - `serial.yml`: a pipeline that, if you start several times it will wait to the previous to finish to start the next one
+- `parallel.yml`: a pipeline that run two steps at the same time in parallel
 - `multiple_jobs.yml`: a pipeline with two jobs than can be started separately
 - `time_job.yml`: example of a resource that trigger the pipeline every 10 seconds
 - `docker_image.yml`: example about how to work with docker images

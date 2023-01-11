@@ -1,0 +1,25 @@
+# Parallel jobs
+jobs:
+- name: parallel_job
+  public: true
+  plan:
+    - in_parallel:
+        steps:
+          - task: a-simple-task
+            config:
+              platform: linux
+              image_resource:
+                type: registry-image
+                source: { repository: busybox }
+              run:
+                path: echo
+                args: ["Hello World! on a-simple-task"]
+          - task: another-simple-task
+            config:
+              platform: linux
+              image_resource:
+                type: registry-image
+                source: { repository: busybox }
+              run:
+                path: echo
+                args: ["Hello World! another-simple-task"]
