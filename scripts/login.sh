@@ -1,3 +1,3 @@
 #!/bin/bash
 
-fly -t example login http://localhost:8080
+fly --target example login --team-name main --concourse-url http://localhost:8080
